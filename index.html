@@ -12,14 +12,19 @@
     <title>RKO-SummerSale</title>
 </head>
 <body>
-    <header class="bg-yellow-100">
+    <header class="bg-yellow-100 flex justify-evenly items-center">
         <div>
-            <h3>---SALE FEVER---</h3>
-            <h2>Purchase TK 200 or above & get <span>20% off</span></h2>
-            <p>Use Promo Code</p><button>SELL200</button>
+        <div class="font-bold text-black text-center">
+            <h2 class="text-xs lg:text-base">---SALE FEVER---</h3>
+            <h2 class=" text-base lg:text-3xl py-1 lg:py-4">Purchase TK 200 or <br> above & get <span class="text-pink-500">20% off</span></h2>
+        </div>
+        <div class="flex justify-center gap-1 lg:gap-4 items-center text-center font-medium text-sm lg:text-base text-black">
+                <h2>Use Promo Code</h2>
+                <button id="btn-sell200" class="btn btn-secondary text-white">SELL200</button>
+        </div>
         </div>
         <div>
-            <img src="/images/summer.png">
+            <img src="/images/summer.png" class="w-44 lg:w-96">
         </div>
     </header>
     <main></main>
