@@ -1,222 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--tailwind cdn-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--daisyui cdn-->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--FontAwesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--tailwind cdn-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--daisyui cdn-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--FontAwesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>RKO-SummerSale</title>
+  <title>RKO-SummerSale</title>
 </head>
-<body>
-    <header class="bg-yellow-50 flex justify-evenly items-center">
-        <div>
-        <div class="font-bold text-black text-center">
-            <h2 class="text-xs lg:text-base">---SALE FEVER---</h3>
-            <h2 class=" text-base lg:text-3xl py-1 lg:py-4">Purchase TK 200 or <br> above & get <span class="text-pink-500">20% off</span></h2>
-        </div>
-        <div class="flex justify-center gap-1 lg:gap-4 items-center text-center font-medium text-sm lg:text-base text-black">
-                <h2>Use Promo Code</h2>
-                <button id="btn-sell200" class="btn btn-secondary text-white">SELL200</button>
-        </div>
-        </div>
-        <div>
-            <img src="/images/summer.png" class="w-44 lg:w-96">
-        </div>
-    </header>
-    <main>
-        <!-- Card section -->
-        <div class="bg-slate-100">
-<!--first three-->
-            <div>
-                <h2 class="font-bold text-2xl text-black py-4">Kitchenware</h2>
-            <div>
-            <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod1.png" alt="Spoons" class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">K. Accessories</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">39.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod2.png" alt="knifes" class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">K. Accessories</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">25.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod3.png" alt="Pressure-Cooker" class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">Home Cooker</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">49.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-            </div>      
-        </div>
 
-        <!--Second three-->
-        <div>
-            <h2 class=" font-bold text-2xl text-black py-4">Sportswear</h2>
-        <div>
-        <div class="card bg-white w-72 shadow-xl">
-            <figure class="px-10 pt-4">
-              <img src="/images/prod4.png" alt="Cap" class="rounded-xl bg-slate-200 w-4/5" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <div class="flex text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              </div>
-              <h2 class="card-title text-black">Sports Back Cap</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">49.00 Tk</button>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-white w-72 shadow-xl">
-            <figure class="px-10 pt-4">
-              <img src="/images/prod5.png" alt=Jersey" class="rounded-xl bg-slate-200 w-4/5" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <div class="flex text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              </div>
-              <h2 class="card-title text-black">Full Jersey Set</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">69.00 Tk</button>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-white w-72 shadow-xl">
-            <figure class="px-10 pt-4">
-              <img src="/images/prod6.png" alt="Pressure-Cocker" class="rounded-xl bg-slate-200 w-4/5" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <div class="flex text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              </div>
-              <h2 class="card-title text-black">Sports cates</h2>
-              <div class="card-actions">
-                <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">159.00 Tk</button>
-              </div>
-            </div>
-          </div>
-        </div>      
+<body>
+  <header class="bg-yellow-50 flex justify-evenly items-center">
+    <div>
+      <div class="font-bold text-black text-center">
+        <h2 class="text-xs lg:text-base">---SALE FEVER---</h3>
+          <h2 class=" text-base lg:text-3xl py-1 lg:py-4">Purchase TK 200 or <br> above & get <span
+              class="text-pink-500">20% off</span></h2>
+      </div>
+      <div
+        class="flex justify-center gap-1 lg:gap-4 items-center text-center font-medium text-sm lg:text-base text-black">
+        <h2>Use Promo Code</h2>
+        <button id="btn-sell200" class="btn btn-secondary text-white">SELL200</button>
+      </div>
+    </div>
+    <div>
+      <img src="/images/summer.png" class="w-44 lg:w-96">
+    </div>
+  </header>
+
+  <main class="bg-slate-100 flex">
+    <!-- Card section -->
+    <div class="bg-slate-100 mx-6">
+     <!-- First three-->
+     <h2 class="font-bold text-2xl text-black py-4">Kitchenware</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!--ONE-->
+     <div class="card bg-white w-96 shadow-xl">
+      <figure class="p-10 bg-slate-200 m-4">
+        <img src="/images/prod1.png" alt="Spoons" class="rounded-xl" />
+      </figure>
+      <div class="flex justify-center p-4 text-yellow-500">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-black">K. Accessories</h2>
+        <div class="card-actions">
+          <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">39.00 Tk</button>
+        </div>
+      </div>
     </div>
 
-            <!--third three-->
-            <div>
-                <h2 class="flex font-bold text-2xl text-black py-4">Furniture</h2>
-            <div>
-            <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod7.png" alt="sofa" class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">Single Relax Chair</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">185.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod8.png" alt=Children-chair class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">Children play</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">299.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card bg-white w-72 shadow-xl">
-                <figure class="px-10 pt-4">
-                  <img src="/images/prod9.png" alt="Pressure-Cocker" class="rounded-xl bg-slate-200 w-4/5" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <div class="flex text-yellow-500">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  </div>
-                  <h2 class="card-title text-black">Flexible SOfa</h2>
-                  <div class="card-actions">
-                    <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">339.00 Tk</button>
-                  </div>
-                </div>
-              </div>
-            </div>      
+    <!--TWO-->
+    <div class="card bg-white w-96 shadow-xl">
+      <figure class="p-10 bg-slate-200 m-4">
+        <img src="/images/prod2.png" alt="Knife" class="rounded-xl" />
+      </figure>
+      <div class="flex justify-center p-4 text-yellow-500">
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-black">K. Accessories</h2>
+        <div class="card-actions">
+          <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">25.00 Tk</button>
         </div>
-        </div>
+      </div>
+    </div>
 
-        <div></div>
-    </main>
+    <!--THREE-->
+    <div class="card bg-white w-96 shadow-xl">
+      <figure class="p-10 bg-slate-200 m-4">
+        <img src="/images/prod3.png" alt="Coocker" class="rounded-xl" />
+      </figure>
+      <div class="flex justify-center p-4 text-yellow-500">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-black">KHome Cooker</h2>
+        <div class="card-actions">
+          <button class="btn btn-primary hover:bg-green-300 bg-transparent font-semibold text-slate-500">49.00 Tk</button>
+        </div>
+      </div>
+    </div>
+      </div>
+    <!--End the Card div here-->
+    </div>
+
+    <div><h2>hellow</h2></div>
+  </main>
 </body>
+
 </html>
