@@ -12,37 +12,32 @@ if (couponValue === "SELL200") {
     document.getElementById('btn.apply').disabled = false;
 }
 else {
-    document.getElementById('btn-apply').disabled = true;
+    document.getElementById('btn-apply').disabled = false;
 }
 //Make Purchase Button
 
 //Apply Button
 //document.getElementById('btn-apply').addEventListener('click', function apply(){})
 
-//Reusable inputValue button code
-function getElement(elementID) {
-    const getElementInput = document.getElementById(elementID);
-    const getElementValue = getElementInput.value;
-    const getElementInputParse = parseFloat(getElementValue);
-    getElementInput.value = "";
-    return getElementInputParse;
+//Reusable getText button code :
+function getText(elementID) {
+    const getTextInput = document.getElementById(elementID);
+    const getTextText = getTextInput.innerText;
+    const getTextParse = parseFloat(getTextText);
+    return getTextParse;
 }
 
-//Reusable textValue button code
-function textElement(elementID,value){
-    const getElement = document.getElementById(elementID);
-    const getElementText = getElement.innerText;
-    const getElementTextParse = parseFloat(getElementText);
-    return getElementTextParse;
+//Reusable SetText code :
+function setTotal(elementID,value){
+    const finalTotal = document.getElementById(elementID);
+    finalTotal.innerText = value;
 }
 
-function setval(){
-    const total = getElementInputParse + getElementTextParse;
-    const newTotal = getElement.innerTextb = value;
-}
-
-//btn-one
+// One slide
 document.getElementById('btn-one').addEventListener('click', function one(){
-    const buttonOne = document.getElementById('btn-one');
-    const totalValue = ( getElementInputParse + setElementParse );
+    const buttonOneInput = getText('para-one');
+    const totalPriceInput = getText('total-price');
+    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalPrice = setTotal('total-price',totalValue);
 })
+
