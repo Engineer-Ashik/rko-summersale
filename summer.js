@@ -4,20 +4,15 @@ console.log('Connected to the Rko-SummerSale Webpage JS successfully !!!');
 const promocode = document.getElementById('btn-sell');
 
 
-//coupon input 
-const couponInput = document.getElementById('coupon');
-const couponValue = couponInput.value;
-if (couponValue === "SELL200") {
-    //total code ><
-    document.getElementById('btn.apply').disabled = false;
-}
-else {
-    document.getElementById('btn-apply').disabled = false;
-}
-//Make Purchase Button
+//Have coupon code :  
+document.getElementById('coupon').addEventListener('click', function coupon(){
+    const callDiscount = document.getElementById('discount');
 
+});
 //Apply Button
 //document.getElementById('btn-apply').addEventListener('click', function apply(){})
+
+//Make Purchase Button
 
 //Reusable getText button code :
 function getText(elementID) {
@@ -33,6 +28,7 @@ function setTotal(elementID,value){
     finalTotal.innerText = value;
 }
 
+//-------------------------
 // One slide
 document.getElementById('btn-one').addEventListener('click', function one(){
     const buttonOneInput = getText('para-one');
@@ -104,3 +100,18 @@ document.getElementById('btn-nine').addEventListener('click', function nine(){
     const totalValue = ( buttonOneInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
+
+//-------------------------
+//Discount Section
+const discountOne = document.getElementById('discount');
+const discountTwo = getText(discountOne);
+const discountThree = ( ( 20 / 100 ) * totalPriceInput ); 
+
+//    if ( couponValue === "SELL200"){
+        //total code ><
+      //  document.getElementById('btn.apply').disabled = false;
+ //   }
+   // else {
+     //   document.getElementById('btn-apply').disabled = false;
+    //}
+    
