@@ -1,7 +1,12 @@
 console.log('Connected to the Rko-SummerSale Webpage JS successfully !!!');
 
 //PromoCode Button
-const promocode = document.getElementById('btn-sell');
+document.getElementById('btn-sell').addEventListener('click', function sell(){
+    const couponInput = document.getElementById('coupon');
+    const couponVal = couponInput.value;
+    couponInput.value = "SELL200";
+
+})
 
 
 //Have coupon code :  
