@@ -8,14 +8,11 @@ document.getElementById('btn-sell').addEventListener('click', function sell(){
 
 })
 
-
-//Have coupon code :  
-document.getElementById('coupon').addEventListener('click', function coupon(){
-    const callDiscount = document.getElementById('discount');
-
-});
 //Apply Button
-//document.getElementById('btn-apply').addEventListener('click', function apply(){})
+document.getElementById('btn-apply').addEventListener('click', function apply(){
+    const haveCouponInput = document.getElementById('coupon');
+    const haveCouponValue = haveCouponInput.value;
+})
 
 //Make Purchase Button
 
@@ -31,6 +28,11 @@ function getText(elementID) {
 function setTotal(elementID,value){
     const finalTotal = document.getElementById(elementID);
     finalTotal.innerText = value;
+    if( value >= 200){
+        document.getElementById('btn-apply').disabled = false;}
+
+    else{ document.getElementById('btn-apply').disabled = true;}
+
 }
 
 //-------------------------
