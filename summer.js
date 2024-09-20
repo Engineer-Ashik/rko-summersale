@@ -8,11 +8,6 @@ document.getElementById('btn-sell').addEventListener('click', function sell(){
 
 })
 
-//Apply Button
-document.getElementById('btn-apply').addEventListener('click', function apply(){
-    const haveCouponInput = document.getElementById('coupon');
-    const haveCouponValue = haveCouponInput.value;
-})
 
 //Make Purchase Button
 
@@ -110,9 +105,9 @@ document.getElementById('btn-nine').addEventListener('click', function nine(){
 
 //-------------------------
 //Discount Section
-const discountOne = document.getElementById('discount');
-const discountTwo = getText(discountOne);
-const discountThree = ( ( 20 / 100 ) * totalPriceInput ); 
+//const discountOne = document.getElementById('discount');
+//const discountTwo = getText(discountOne);
+//const discountThree = ( ( 20 / 100 ) * totalPriceInput ); 
 
 //    if ( couponValue === "SELL200"){
         //total code ><
@@ -121,4 +116,24 @@ const discountThree = ( ( 20 / 100 ) * totalPriceInput );
    // else {
      //   document.getElementById('btn-apply').disabled = false;
     //}
+    //Apply Button
+document.getElementById('btn-apply').addEventListener('click', function apply(){
+    const haveCouponInput = document.getElementById('coupon');
+    const haveCouponValue = haveCouponInput.value;
+    const totalApply = document.getElementById('total');
+    const getTotal = getText('total');
+    const discountApply = document.getElementById('discount');
+    const getDiscount = getText('discount');
+    const totalPriceApply = document.getElementById('total-price');
+    const getTotalPrice = getText('total-price');
+
+    if(haveCouponValue === "SELL200"){
+        getDiscount = ( getTotal - (getTotal * (0.05)) );
+        getTotalPrice = ( getTotal - getDiscount);
+
+    }
+    else{
+        alert("Enter the Correct Discount Coupon");
+    }
+})
     
