@@ -41,65 +41,65 @@ document.getElementById('btn-one').addEventListener('click', function one(){
 
 // Two slide
 document.getElementById('btn-two').addEventListener('click', function two(){
-    const buttonOneInput = getText('para-two');
+    const buttonTwoInput = getText('para-two');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonTwoInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Three slide
 document.getElementById('btn-three').addEventListener('click', function three(){
-    const buttonOneInput = getText('para-three');
+    const buttonThreeInput = getText('para-three');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonThreeInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Four slide
 document.getElementById('btn-four').addEventListener('click', function four(){
-    const buttonOneInput = getText('para-four');
+    const buttonFourInput = getText('para-four');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonFourInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Five slide
 document.getElementById('btn-five').addEventListener('click', function five(){
-    const buttonOneInput = getText('para-five');
+    const buttonFiveInput = getText('para-five');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonFiveInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Six slide
 document.getElementById('btn-six').addEventListener('click', function six(){
-    const buttonOneInput = getText('para-six');
+    const buttonSixInput = getText('para-six');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonSixInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Seven slide
 document.getElementById('btn-seven').addEventListener('click', function seven(){
-    const buttonOneInput = getText('para-seven');
+    const buttonSevenInput = getText('para-seven');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonSevenInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Eight slide
 document.getElementById('btn-eight').addEventListener('click', function eight(){
-    const buttonOneInput = getText('para-eight');
+    const buttonEightInput = getText('para-eight');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonEightInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
 // Nine slide
 document.getElementById('btn-nine').addEventListener('click', function nine(){
-    const buttonOneInput = getText('para-nine');
+    const buttonNineInput = getText('para-nine');
     const totalPriceInput = getText('total-price');
-    const totalValue = ( buttonOneInput + totalPriceInput );
+    const totalValue = ( buttonNineInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
 })
 
@@ -120,20 +120,27 @@ document.getElementById('btn-nine').addEventListener('click', function nine(){
 document.getElementById('btn-apply').addEventListener('click', function apply(){
     const haveCouponInput = document.getElementById('coupon');
     const haveCouponValue = haveCouponInput.value;
-    const totalApply = document.getElementById('total');
-    const getTotal = getText('total');
-    const discountApply = document.getElementById('discount');
-    const getDiscount = getText('discount');
-    const totalPriceApply = document.getElementById('total-price');
     const getTotalPrice = getText('total-price');
+    console.log(getTotalPrice);
 
     if(haveCouponValue === "SELL200"){
-        getDiscount = ( getTotal - (getTotal * (0.05)) );
-        getTotalPrice = ( getTotal - getDiscount);
+        getDiscount = ( (getTotalPrice * (0.20)) );
+        console.log(getDiscount);
+        const prevDiscount = document.getElementById('discount');
+        const prevDiscountVal = prevDiscount.innerText;
+        const prevDiscountParse = parseFloat(prevDiscountVal);
+        prevDiscount.innerText = getDiscount;
+
+        getTotal = ( getTotalPrice - getDiscount);
+        console.log(getTotal);
+        const prevTotal = document.getElementById('total');
+        const prevTotalVal = prevTotal.innerText;
+        const prevTotalParse = parseFloat(prevTotalVal);
+        prevTotal.innerText = getTotal;
 
     }
     else{
-        alert("Enter the Correct Discount Coupon");
+        alert("Please Enter The Correct Discount Coupon");
     }
 })
     
