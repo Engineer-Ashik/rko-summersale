@@ -208,5 +208,21 @@ document.getElementById('btn-apply').addEventListener('click', function apply() 
     }
 })
 
+//Go Home Button :
+document.getElementById('go-home').addEventListener('click', function home(){
+    const items = document.getElementById('item-list');
+    const itemsval = items.innerText;
+    items.innerText = " -- ";
+    const totalPrices = document.getElementById('total-price');
+    const totalPsval = totalPrices.innerText;
+    totalPrices.innerText = "00";
+    const discounts = document.getElementById('discount');
+    const discountsval = discounts.innerText;
+    discounts.innerText = "00";
+    const totals = document.getElementById('total');
+    const totalsval = totals.innerText;
+    totals.innerText = "00";
 
+
+})
 
