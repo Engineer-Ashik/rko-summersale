@@ -8,9 +8,18 @@ document.getElementById('btn-sell').addEventListener('click', function sell(){
 
 })
 
+//-------------------------
+//itemList section :
+function additem(itemName){
+const itemList = document.getElementById('item-list');
+const counts = itemList.childElementCount;
+console.log('added successfully itemlist');
+const newList = document.createElement('p');
+newList.innerHTML = counts + ' . ' + itemName;
+itemList.appendChild(newList);
+}
 
-//Make Purchase Button
-
+//-------------------------
 //Reusable getText button code :
 function getText(elementID) {
     const getTextInput = document.getElementById(elementID);
@@ -19,6 +28,7 @@ function getText(elementID) {
     return getTextParse;
 }
 
+//-------------------------
 //Reusable SetText code :
 function setTotal(elementID,value){
     const finalTotal = document.getElementById(elementID);
@@ -37,6 +47,7 @@ document.getElementById('btn-one').addEventListener('click', function one(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonOneInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('K Accessories');
 })
 
 // Two slide
@@ -45,6 +56,7 @@ document.getElementById('btn-two').addEventListener('click', function two(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonTwoInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('K Supplements');
 })
 
 // Three slide
@@ -53,6 +65,7 @@ document.getElementById('btn-three').addEventListener('click', function three(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonThreeInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Home Cooker');
 })
 
 // Four slide
@@ -61,6 +74,7 @@ document.getElementById('btn-four').addEventListener('click', function four(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonFourInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Sports Black Cap');
 })
 
 // Five slide
@@ -69,6 +83,7 @@ document.getElementById('btn-five').addEventListener('click', function five(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonFiveInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Full Jersey Set');
 })
 
 // Six slide
@@ -77,6 +92,7 @@ document.getElementById('btn-six').addEventListener('click', function six(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonSixInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Sports cates');
 })
 
 // Seven slide
@@ -85,6 +101,7 @@ document.getElementById('btn-seven').addEventListener('click', function seven(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonSevenInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Single Relax Chair');
 })
 
 // Eight slide
@@ -93,6 +110,7 @@ document.getElementById('btn-eight').addEventListener('click', function eight(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonEightInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Children play');
 })
 
 // Nine slide
@@ -101,22 +119,11 @@ document.getElementById('btn-nine').addEventListener('click', function nine(){
     const totalPriceInput = getText('total-price');
     const totalValue = ( buttonNineInput + totalPriceInput );
     const totalPrice = setTotal('total-price',totalValue);
+    additem('Flexible Sofa');
 })
 
 //-------------------------
-//Discount Section
-//const discountOne = document.getElementById('discount');
-//const discountTwo = getText(discountOne);
-//const discountThree = ( ( 20 / 100 ) * totalPriceInput ); 
-
-//    if ( couponValue === "SELL200"){
-        //total code ><
-      //  document.getElementById('btn.apply').disabled = false;
- //   }
-   // else {
-     //   document.getElementById('btn-apply').disabled = false;
-    //}
-    //Apply Button
+//Apply Button:
 document.getElementById('btn-apply').addEventListener('click', function apply(){
     const haveCouponInput = document.getElementById('coupon');
     const haveCouponValue = haveCouponInput.value;
@@ -143,4 +150,18 @@ document.getElementById('btn-apply').addEventListener('click', function apply(){
         alert("Please Enter The Correct Discount Coupon");
     }
 })
-    
+
+//Make Purchase Button:
+document.getElementById('purchase').addEventListener('click',function makePurchase(){
+    const getTotal = document.getElementById('total-price');
+    const getTotalV = getTotal.innerText;
+    const getTotalParse = parseFloat(getTotalV);
+
+    if(getTotalParse > 0 ){
+        document.getElementById('purchase').disabled = false;
+    }
+    else{
+        document.getElementById('purchase').disabled = true;
+    }
+})
+
